@@ -1,19 +1,19 @@
 pipeline{
     agent any
     stages{
-        stage("Testing"){
+        stage("check date and time"){
             steps{
-                echo "Testing is going on "
+                sh 'date'
             }
         }
-        stage("Building"){
+        stage("present working directory"){
             steps{
-                echo "code is building "
+                sh 'pwd'
             }
         }
-        stage("Deploying"){
+        stage("check calender"){
             steps{
-                echo "Deploying on server "
+                sh 'cal'
             }
         }
     }
